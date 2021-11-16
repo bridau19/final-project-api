@@ -4,7 +4,6 @@
 
 ! npm start not working
 ! heroku not working
-! use screenshots to get started
 
 # Next Steps for Final project:
 ## Frontend:
@@ -19,5 +18,5 @@
 
 ## API
 - Add Routes file for index.js
-- Hook uo Firebase/Firestore
+- Hook up Firebase/Firestore
     -Create collection for posts
