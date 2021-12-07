@@ -9,3 +9,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`App Listening on Port ${port}`);
 })
+
+// TODO: add route all
+// TODO: add route all single user
