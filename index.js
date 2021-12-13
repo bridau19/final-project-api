@@ -20,7 +20,7 @@ firebase.initializeApp(firebaseConfig);
 
 // routes for directing user to correct place
 const indexRoute = require("./routes/index");
-const singlePostRoute = require("./routes/post");
+// const singlePostRoute = require("./routes/post");
 const createPostRoute = require("./routes/createPost");
 
 app.use(function (req, res, next) {
@@ -45,7 +45,7 @@ app.use("/", indexRoute);
 // submit new post
 app.use("/create", createPostRoute);
 // get single post
-app.use("/post", singlePostRoute);
+// app.use("/post", singlePostRoute);
 
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`);
