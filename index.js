@@ -15,15 +15,13 @@ const firebaseConfig = {
     appId: "1:650834290917:web:0d893072be86aef7460c0c"
   };
 
-// TODO: add route all
-// TODO: add route all single user
-// TODO: add post
-
 // initialize firebase
 firebase.initializeApp(firebaseConfig);
 
 // routes for directing user to correct place
 const indexRoute = require("./routes/index");
+const singlePostRoute = require("./routes/post");
+const createPostRoute = require("./routes/createPost");
 
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
@@ -42,10 +40,14 @@ app.use(function (req, res, next) {
     next();
   });
 
-// tell express to use routes
+// get all posts
 app.use("/", indexRoute);
+// submit new post
+app.use("/create", createPostRoute);
+// get single post
+app.use("/post", singlePostRoute);
 
 app.listen(port, () => {
-    console.log(`App Listening on Port ${port}`);
+    console.log(`Listening at http://localhost:${port}`);
 })
 

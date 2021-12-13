@@ -18,10 +18,12 @@ router.get("/", (req, res) => {
     posts
         .then((response) => {
             response.forEach((doc) => {
-                // Push document into arrat every time the query loops over
-                postsArray.push(doc.data());
+                const docData = doc.data();
+                docData.id = doc.id;
+                // Push document into array every time the query loops over
+                postsArray.push(docData);
             });
-            return res.send( postsArray);
+            return res.send(postsArray);
         })
         .catch(function (error) {
             console.log("Error:", error);
