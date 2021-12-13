@@ -2,8 +2,6 @@
 
 ## Node + Express + Firestore
 
-! npm start not working
-! heroku not working
 
 # Next Steps for Final project:
 ## Frontend:
