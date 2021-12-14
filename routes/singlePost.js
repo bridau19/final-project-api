@@ -12,8 +12,11 @@ router.get('/:id', (req, res) => {
     const postId = req.params.id;
     const post = firestore.getDoc(firestore.doc(db, "posts", postId));
     
-    post.then((response) => {
-        const post = response.data;
+    post
+        .then((response) => {
+        const post = response.data();
+        console.log(response)
+        console.log(response.data())
         if (post) return res.send(post);
         return res.send( { postMessage: `No doc` });
 
